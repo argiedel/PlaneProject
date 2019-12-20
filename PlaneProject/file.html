@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <script src='flight_map.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            left: 0px;
+            top: 1.5in;
+            bottom: 0;
+            width: 70%;
+        }
+
+        #info {
+            position: absolute;
+            right: 0px;
+            top: 2in;
+            bottom: 0;
+            width: 28%;
+        }
+    </style>
+</head>
+<body onload="loadMap();">
+<center>
+    <h1>How Many Planes Do You Think You Have Overhead?</h1>
+    Latitude:<br>
+    <input type="text" id="lat" name="Latitude">
+    <br>
+    Longtitude:<br>
+    <input type="text" id="lon" name="Longitude" \>
+    <br><br>
+</center>
+</body>
+
+<div id='map'></div>
+<div id="info">
+    <h2>Flights Overhead:</h2>
+    <p id="flights"></p>
+</div>
+</html>
